@@ -1,5 +1,6 @@
 #include <complex>
 #include <iostream>
+#include <typeinfo>
 #include <vector>
 
 using namespace std;
@@ -20,4 +21,15 @@ int main() {
   for (int i = 0; i < v.size(); i++) {
     cout << "Value: " << i << "\n";
   }
+
+  auto b = true;
+  auto d = 7.2;
+  auto z = sqrt(3.14);
+
+  cout << "Automatic Type Initialization: " << typeid(b).name() << " - " << b
+       << endl;
+  cout << "Automatic Type Initialization: " << typeid(d).name() << " - " << d
+       << endl;
+  cout << "Automatic Type Initialization: " << typeid(z).name() << " - " << z
+       << endl;
 }
